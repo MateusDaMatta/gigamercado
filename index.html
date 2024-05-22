@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giga Market</title>
+    <link rel="preload" href="./styles/main.css" as="style">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <div class="sidebars">
+    <div class="carrinho-sidebar">   
+      <div class="cart-container">
+        <button class="closecartBtn">Close</button>
+        <div class="cart-top">
+          <img src="./images/Font_Awesome_5_solid_shopping-cart.svg.png" width="35px"  class="cart2">
+          <span class="cart-top-text">My cart</span>
+        </div>  
+      </div>
+      <div class="cart-items">
+        <div class="no-item">
+          <img src="./images/Font_Awesome_5_solid_shopping-cart.svg.png" width="100px">
+          <span>Your cart is empty.</span>
+        </div>
+      </div>
+      <div class="total-price">Total:<span class="total">R$0.00</span></div>
+      <a class="checkout-btn"><div>proceed to checkout</div></a>
+    </div>
+
+    <div id="navbar-container" class="navbar-container">
+      <nav class="navbar-show">
+        <div class="side-bar-logo">
+          <button class="close-sidebar">X</button>
+          <img src="./images/mainlogo.png" width="100">
+        </div>
+          <div class="below-logo">
+            <h3>Categories</h3>
+              <ul class="nav-items">    
+                <a data-id="fnv" class="categ"><li>Fruits and vegetables</li></a>
+                <a data-id="bar" class="categ"><li>Bar</li></a>
+                <a data-id="dailycare" class="categ"><li>Personal care</li></a>
+                <a data-id="pets" class="categ"><li>Pets</li></a>
+                <a data-id="refresh" class="categ"><li>Wines</li></a>
+              </ul>
+          </div>    
+      </nav>    
+    </div>
+  </div>
+
+  <div class="receiveorderContainer">
+    <div class="receiveOrder">
+      <button class="close-btn">X</button>
+      <h2>Forma de entrega</h2>
+      <div class="forma">
+        <div id="receber">
+          <span class="forma-all"><img src="./images/entrega.png" width="73px">
+            <span class="forma-text" id="receber">Receive at home</span></span>
+        </div>
+        <div id="retirar">  
+          <span class="forma-all"><img src="./images/retirada.png" width="73px">
+            <span class="forma-text" id="retirar">Pick up in store</span></span>
+        </div>      
+      </div>
+    </div>
+  </div>  
+
+  <div class="content">
+    <header>
+      <div class="contact-container">
+        <nav class="contact">
+            <ul>
+                <li id="conosco" class="pad"><a href="">Jobs</a></li>
+                <li id="email" class="pad"><a href="mailto:test@gigamarket.com">e-mail: contact@gigamercado.com</a></li>
+                <li id="fale" class="pad"><a href="">Contact us</a></li>
+                <li class="pad"><a href=""> Our stores</a></li>
+            </ul>
+        </nav>
+      </div>
+      <div class="sticky-navbar">
+        <div class="search-container">
+            <nav class="contact">
+                <ul>
+                    <li id="logo"><a href=""><img src="./images/mainlogo.png" alt="" width="50" height="50" class="logo"></a></li>
+                    <li class="search-box">
+                        <select class="select">
+                            <option value="Search in...">Search in...</option>
+                            <option class="filter" value="fnv">Fruits and vegetables</option>
+                            <option class="filter" value="bar">Bar</option>
+                            <option class="filter" value="dailycare">Personal care</option>
+                            <option class="filter" value="pets">Pets</option>
+                            <option class="filter" value="refresh">Wines</option>
+                        </select>
+                        <div class="search-input">
+                            <input class="searchbar" type="text" placeholder="Search everything at GigaMercado">
+                            <button id="search">
+                                <img src="./images/searchicon.png" width="20px">
+                            </button>
+                        </div>
+                    </li>
+                    <a href=""><li id="conta"><img src="./images/user-icon.png" height="25">My account</li></a>
+                    <li id="carrinho"><img src="./images/Font_Awesome_5_solid_shopping-cart.svg.png" height="25"></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="below-search">
+            <div class="categories">
+                <img src="./images/Hamburger_icon.svg.png" width="25"><span> View all categories</span>
+            </div>
+            <div class="get">
+                <button class="change-btn">Change</button>
+                <span class="entrega">Receive at home</span>
+            </div>
+        </div>
+    </div>
+    <div class="stick-placeholder"></div>
+  <div class="clear-html">
+    <div class="slider">
+      <div class="slides">
+          <button class="next-prev" id="prev"><img src="./images/arrow2.png" alt=""></button>
+          <div class="child-slider">
+              <img class="slide" id="img1" data-id="1" src="./images/pao.jpg" alt="img 1">
+              <img class="slide" id="img2" data-id="2" src="./images/azeite.jpg" alt="img 2">
+              <img class="slide" id="img3" data-id="3" src="./images/beer.jpg" alt="img 3">
+              <img class="slide" id="img4" data-id="4" src="./images/bleach.jpg" alt="img 4">
+          </div>
+          <button class="next-prev" id="next"><img src="./images/arrow2right.png" alt=""></button>
+          <div class="slider-nav">
+              <a href="#img1" class="active"></a>
+              <a href="#img2"></a>
+              <a href="#img3"></a>
+              <a href="#img4"></a>
+          </div>
+      </div>
+    </div>
+    
+    <div class="flavour-container">
+      <div class="flavour">
+        <span>Try</span> exclusive delicious flavours
+        <div class="flavour-categories">
+          <a href="#"><img class="fc" src="./images/padariacuatro.png" alt=""></a>
+          <a href="#"><img class="fc" src="./images/horti.png" alt=""></a>
+          <a href="#"><img class="fc" src="./images/mundo.png" alt=""></a>
+          <a href="#"><img class="fc" src="./images/carne.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="bar">
+      <button id="scroll-left"><img src="./images/arrow2.png" alt=""></button>
+      <div class="mybar">
+        <div class="bar-text"><span>My ideal bar</span></div>
+        <div class="bar-products-cont">
+          <ul class="bar-products">
+            <div class="drink-container"><li data-id="1"><img class="bar-img" src="./images/bar/bacardi.jpg" alt="">
+              <span class="bacardi-title">BACARDI</span>
+              <span class="bacardi-text">Bacardi Rum</span>
+              <div class="price-qnty-container">
+                <span class="price">R$49,99</span>
+                <input class="qnty" value="1" min="1" type="number" required>
+              </div>  
+                <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="2"><img class="bar-img" src="./images/bar/ballantine.jpg" alt="">
+              <span class="bacardi-title">BALLANTINE'S</span>
+              <span class="bacardi-text">Ballantine's Whisky</span>
+              <div class="price-qnty-container">
+              <span class="price">R$61,66</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="3"><img class="bar-img" src="./images/bar/budweiser2.jpg" alt="">
+              <span class="bacardi-title">BUDWEISER</span>
+              <span class="bacardi-text">Budweiser Beer</span>
+              <div class="price-qnty-container">
+              <span class="price">R$2,69</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="4"><img class="bar-img" src="./images/bar/castanha.jpg" alt="">
+              <span class="bacardi-title">CASHEW NUTS</span>
+              <span class="bacardi-text">150g Cashew Nuts</span>
+              <div class="price-qnty-container">
+              <span class="price">R$4,99</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="5"><img class="bar-img" src="./images/bar/corona.jpg" alt="">
+              <span class="bacardi-title">CORONA</span>
+              <span class="bacardi-text">Corona Beer</span>
+              <div class="price-qnty-container">
+              <span class="price">R$5,00</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="6"><img class="bar-img" src="./images/bar/heineken.jpg" alt="">
+              <span class="bacardi-title">HEINEKEN</span>
+              <span class="bacardi-text">Heineken Beer</span>
+              <div class="price-qnty-container">
+              <span class="price">R$12,00</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="7"><img class="bar-img" src="./images/bar/jager.jpg" alt="">
+              <span class="bacardi-title">JÄGERMEISTER</span>
+              <span class="bacardi-text">Jägermeister Liquor</span>
+              <div class="price-qnty-container">
+              <span class="price">R$99,86</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="8"><img class="bar-img" src="./images/bar/jameson.jpg" alt="">
+              <span class="bacardi-title">JAMESON</span>
+              <span class="bacardi-text">Jameson Whisky</span>
+              <div class="price-qnty-container">
+              <span class="price">R$98,90</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="9"><img class="bar-img" src="./images/bar/stella.jpg" alt="">
+              <span class="bacardi-title">STELLA ARTOIS</span>
+              <span class="bacardi-text">Stella Artois Beer</span>
+              <div class="price-qnty-container">
+              <span class="price">R$8,49</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="10"><img class="bar-img" src="./images/bar/jack.jpg" alt="">
+              <span class="bacardi-title">JACK DANIEL'S</span>
+              <span class="bacardi-text">Jack Daniel's Honey</span>
+              <div class="price-qnty-container">
+              <span class="price">R$104,00</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+        </ul>
+        </div>
+      </div>
+      <button id="scroll-right"><img src="./images/arrow2right.png" alt=""></button>
+    </div>
+    
+    <div class="refresh">
+      <button id="sl2"><img src="./images/arrow2.png" alt=""></button>
+      <div class="mybar">
+        <div class="bar-text"><span>Refresh your Weekend!</span></div>
+        <div class="weekend-container">
+          <ul class="bar-products">
+            <div class="drink-container"><li data-id="11"><img class="bar-img" src="./images/vinhos/winemateus.jpg" alt="">
+              <span class="bacardi-title">MATEUS</span>
+              <span class="bacardi-text">Mateus wine</span>
+              <div class="price-qnty-container">
+              <span class="price">R$41,06</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="12"><img class="bar-img" src="./images/vinhos/borsao.jpg" alt="">
+              <span class="bacardi-title">BORSAO</span>
+              <span class="bacardi-text">Borsao wine</span>
+              <div class="price-qnty-container">
+              <span class="price">R$89,00</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="13"><img class="bar-img" src="./images/vinhos/broadleaf.jpg" alt="">
+              <span class="bacardi-title">BROADLEAF</span>
+              <span class="bacardi-text">Broadleaf wine</span>
+              <div class="price-qnty-container">
+              <span class="price">R$84,00</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="14"><img class="bar-img" src="./images/vinhos/corvowine.jpg" alt="">
+              <span class="bacardi-title">CORVO</span>
+              <span class="bacardi-text">Corvo wine</span>
+              <div class="price-qnty-container">
+              <span class="price">R$125,99</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="15"><img class="bar-img" src="./images/vinhos/jacobcreek.jpg" alt="">
+              <span class="bacardi-title">JACOB'S CREEK</span>
+              <span class="bacardi-text">Jacob's Creek wine</span>
+              <div class="price-qnty-container">
+              <span class="price">R$84,00</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="16"><img class="bar-img" src="./images/vinhos/rasteau.jpg" alt="">
+              <span class="bacardi-title">RASTEAU</span>
+              <span class="bacardi-text">Rasteau wine</span>
+              <div class="price-qnty-container">
+              <span class="price">R$248,00</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="17"><img class="bar-img" src="./images/vinhos/sauvignonblanc.jpg" alt="">
+              <span class="bacardi-title">SAUVIGNON BLANC</span>
+              <span class="bacardi-text">Sauvignon Blanc wine</span>
+              <div class="price-qnty-container">
+              <span class="price">R$79,90</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+          </ul>
+        </div>
+      </div>
+      <button id="sr2"><img src="./images/arrow2right.png" alt=""></button>
+    </div>
+
+    <div class="dailycare">
+      <button id="sl3"><img src="./images/arrow2.png" alt=""></button>
+      <div class="mybar">
+        <div class="bar-text"><span>For your daily Care</span></div>
+        <div class="daily-care">
+          <ul class="bar-products">
+            <div class="drink-container"><li data-id="18"><img class="bar-img" src="./images/care/antisséptico-bucal-listerine.png" alt="">
+              <span class="bacardi-title">LISTERINE</span>
+              <span class="bacardi-text">Listerine mouthwash</span>
+              <div class="price-qnty-container">
+              <span class="price">R$18,82</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="19"><img class="bar-img" src="./images/care/creme-hidratante-cerave.png" alt="">
+              <span class="bacardi-title">CERAVE</span>
+              <span class="bacardi-text">Moisturizing cream</span>
+              <div class="price-qnty-container">
+              <span class="price">R$30,39</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="20"><img class="bar-img" src="./images/care/head-and-shoulders.jpg" alt="">
+              <span class="bacardi-title">HEAD&SHOULDERS</span>
+              <span class="bacardi-text">Shampoo Head&Shoulders</span>
+              <div class="price-qnty-container">
+              <span class="price">R$24,99</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="21"><img class="bar-img" src="./images/care/sabonete-liquido-palmolive.png" alt="">
+              <span class="bacardi-title">PALMOLIVE</span>
+              <span class="bacardi-text">Liquid Soap Palmolive</span>
+              <div class="price-qnty-container">
+              <span class="price">R$9,99</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="22"><img class="bar-img" src="./images/care/sabonete_liquido_granado_tradicional.png" alt="">
+              <span class="bacardi-title">GRANADO</span>
+              <span class="bacardi-text">Liquid Soap Granado</span>
+              <div class="price-qnty-container">
+              <span class="price">R$25,49</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="23"><img class="bar-img" src="./images/care/colgate.jpg" alt="">
+              <span class="bacardi-title">COLGATE</span>
+              <span class="bacardi-text">Colgate Toothpaste</span>
+              <div class="price-qnty-container">
+              <span class="price">R$9,99</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="24"><img class="bar-img" src="./images/care/conditioner.png" alt="">
+              <span class="bacardi-title">PANTENE</span>
+              <span class="bacardi-text">Pantene Conditioner</span>
+              <div class="price-qnty-container">
+              <span class="price">R$12,79</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+          </ul>
+        </div>
+      </div>
+      <button id="sr3"><img src="./images/arrow2right.png" alt=""></button>
+    </div>
+
+    <div class="fnv">
+      <button id="sl4"><img src="./images/arrow2.png" alt=""></button>
+      <div class="mybar">
+        <div class="bar-text"><span>Best fruits and vegetables in town</span></div>
+        <div class="best-fruits">
+          <ul class="bar-products">
+            <div class="drink-container"><li data-id="25"><img class="bar-img" src="./images/fnv/apple.jpg" alt="">
+              <span class="bacardi-title">STRAIGHT FROM THE PRODUCER</span>
+              <span class="bacardi-text">Apple</span>
+              <div class="price-qnty-container">
+              <span class="price">R$1,68</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="26"><img class="bar-img" src="./images/fnv/avocado.jpg" alt="">
+              <span class="bacardi-title">STRAIGHT FROM THE PRODUCER</span>
+              <span class="bacardi-text">Avocado</span>
+              <div class="price-qnty-container">
+              <span class="price">R$5,66</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="27"><img class="bar-img" src="./images/fnv/banana.jpg" alt="">
+              <span class="bacardi-title">STRAIGHT FROM THE PRODUCER</span>
+              <span class="bacardi-text">Banana</span>
+              <div class="price-qnty-container">
+              <span class="price">R$1,43</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="28"><img class="bar-img" src="./images/fnv/brocolli.jpg" alt="">
+              <span class="bacardi-title">STRAIGHT FROM THE PRODUCER</span>
+              <span class="bacardi-text">Broccoli</span>
+              <div class="price-qnty-container">
+              <span class="price">R$10,99</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="29"><img class="bar-img" src="./images/fnv/onion.jpg" alt="">
+              <span class="bacardi-title">STRAIGHT FROM THE PRODUCER</span>
+              <span class="bacardi-text">Onion</span>
+              <div class="price-qnty-container">
+              <span class="price">R$1,68</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="30"><img class="bar-img" src="./images/fnv/pepper.jpg" alt="">
+              <span class="bacardi-title">STRAIGHT FROM THE PRODUCER</span>
+              <span class="bacardi-text">Pepper</span>
+              <div class="price-qnty-container">
+              <span class="price">R$3,20</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="31"><img class="bar-img" src="./images/fnv/potato.jpg" alt="">
+              <span class="bacardi-title">STRAIGHT FROM THE PRODUCER</span>
+              <span class="bacardi-text">Potato</span>
+              <div class="price-qnty-container">
+              <span class="price">R$1,58</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+          </ul>
+        </div>
+      </div>
+      <button id="sr4"><img src="./images/arrow2right.png" alt=""></button>
+    </div>
+
+    <div class="pets">
+      <button id="sl5"><img src="./images/arrow2.png" alt=""></button>
+      <div class="mybar">
+        <div class="bar-text"><span>For your best friend!</span></div>
+        <div class="best-friend">
+          <ul class="bar-products">
+            <div class="drink-container"><li data-id="32"><img class="bar-img" src="./images/pets/glass-aquarium.png" alt="">
+              <span class="bacardi-title">TETRA</span>
+              <span class="bacardi-text">Glass aquarium</span>
+              <div class="price-qnty-container">
+              <span class="price">R$147,22</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="33"><img class="bar-img" src="./images/pets/parrot-food.png" alt="">
+              <span class="bacardi-title">3-D PET PRODUCTS</span>
+              <span class="bacardi-text">Natural parrot food</span>
+              <div class="price-qnty-container">
+              <span class="price">R$15,74</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="34"><img class="bar-img" src="./images/pets/pedigreedogfood.jpg" alt="">
+              <span class="bacardi-title">PEDIGREE</span>
+              <span class="bacardi-text">Adult dog food</span>
+              <div class="price-qnty-container">
+              <span class="price">R$3,69</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="35"><img class="bar-img" src="./images/pets/purina-cat-food.jpg" alt="">
+              <span class="bacardi-title">PURINA</span>
+              <span class="bacardi-text">Tuna cat food</span>
+              <div class="price-qnty-container"> 
+              <span class="price">R$3,39</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="36"><img class="bar-img" src="./images/pets/purina-dog-food.png" alt="">
+              <span class="bacardi-title">PURINA</span>
+              <span class="bacardi-text">Meat dog food</span>
+              <div class="price-qnty-container">
+              <span class="price">R$3,39</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="37"><img class="bar-img" src="./images/pets/smallbirdcage.png" alt="">
+              <span class="bacardi-title">A&E CAGE</span>
+              <span class="bacardi-text">Compact house small bird</span>
+              <div class="price-qnty-container">
+              <span class="price">R$26,97</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+            <div class="drink-container"><li data-id="38"><img class="bar-img" src="./images/pets/whiskas-cat-food.png" alt="">
+              <span class="bacardi-title">WHISKAS</span>
+              <span class="bacardi-text">Salmon cat food</span>
+              <div class="price-qnty-container">
+              <span class="price">R$3,65</span>
+              <input class="qnty" value="1" min="1" type="number" required>
+              </div>
+              <button class="buy-btn">Add to cart</button>
+            </li></div>
+          </ul>
+        </div>
+      </div>
+      <button id="sr5"><img src="./images/arrow2right.png" alt=""></button>
+    </div>
+  </div>
+  <div class="CLEAN-HTML"></div>  
+
+    <footer>
+      <div class="footer-content">
+        <div class="foot-info">
+          <div class="orders">My orders</div>
+          <div class="about">About GigaMercado</div>
+          <div class="help">Help</div>
+          <div class="socials">Our socials</div>
+        </div>
+        <div class="socials-img-links">
+          <a href="#"><img src="./images/socials/face.png" alt=""></a>
+          <a href="#"><img src="./images/socials/insta.png" alt=""></a>
+          <a href="#"><img src="./images/socials/linkedin.png" alt=""></a>
+        </div>  
+        <div class="direito">©2024 GigaMercado. All rights reserved</div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+    <script src="./scripts/main.js"></script>
+</html>
