@@ -592,7 +592,7 @@ function addCartEmpty(){
 const totalOrder = document.querySelector('.total-price')
 const checkout = document.querySelector('.checkout-btn')
 
-//GUARDAR CARRINHO NA LOCALSTORAGE OR SOME SHIT
+//GUARDAR CARRINHO NA LOCALSTORAGE
 
 document.addEventListener('DOMContentLoaded', () => {
     const cartData = JSON.parse(localStorage.getItem('cart'))
