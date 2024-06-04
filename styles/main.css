@@ -146,7 +146,7 @@ a{
     top: 0;
     right: 0;
     background-color: rgb(240, 240, 240);
-    height: 100%;
+    height: 100vh;
     width: 0;
     box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.2);
     transition: all 0.1s ease;
@@ -193,7 +193,8 @@ a{
 .cart-items{
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
+    min-height: 85.1%;
 }
 
 .cart-item{
@@ -251,13 +252,16 @@ a{
     cursor: pointer;
 }
 
+.checkout{
+    position: static;
+    bottom: 0;
+}
+
 .checkout-btn{
-    position: sticky;
     cursor: pointer;
     background-color: black;
     display: flex;
     justify-content: center;
-    width: 400px;
     bottom: 0;
     padding: 10.8px;
     box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -276,12 +280,10 @@ a{
 }
 
 .total-price{
-    position: sticky;
-    bottom: 50px;
+    bottom: 45px;
     display: flex;
     font-weight: bold;
     font-size: larger;
-    width: 400px;
     height: 44.75px;
     background-color: rgb(240, 240, 240);
     align-items: center;
@@ -304,7 +306,7 @@ a{
 
 .categories {
     margin-top: 0;
-    margin-left: 14%;
+    margin-left: 19%;
     cursor: pointer;
     width: 15%;
     align-items: center;
@@ -374,16 +376,22 @@ a{
 }
 
 .get{
-    margin-left: 14%;
-    margin-top: 10px;
-    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    height: 100%;
+    align-items: center;
+}
+
+.entrega{
+    margin: 0;
 }
 
 .change-btn{
     border: none;
     background: none;
     font-weight: bolder;
-    font-size: 12pt;
+    font-size: 11pt;
     cursor: pointer;
 }
 
@@ -515,6 +523,7 @@ a{
 
 .flavour-container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     margin-top: 1%;
@@ -686,7 +695,6 @@ a{
 footer{
     text-align: center;
     background-color: #272727;
-    margin-top: 50px;
     color: white;
     transform: translate(0, 153%);
 }
@@ -778,8 +786,11 @@ footer{
 .below-search{
     width: 100%;
     z-index: 9999;
-    background-color: white;
     margin-top: 0;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .stick-placeholder{
@@ -797,8 +808,32 @@ footer{
 /*RESPONSIVENESS*/
 @media screen and (max-width: 1080px){
 
+
+    .slider{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .child-slider{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .child-slider img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .next-prev{
+        display: flex;
+        flex-wrap: wrap;
+        width: 10%;
+    }
+    
     .stick-placeholder{
-        height: 0;
+        height: 120px;
     }
 
     .contact-container{
@@ -813,12 +848,15 @@ footer{
         width: 85%;
         font-size: 8pt;
         padding: 0;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
     }
     
     .search-box select{
         width: 15%;
         height: 56%;
         font-size: 8pt;
+        display: none;
     }
     
     .search-box button{
@@ -834,6 +872,7 @@ footer{
     #conta img{
         height: 30px;
         margin: 0;
+        margin-bottom: 2.8px;
     }
 
     #conta span{
@@ -843,7 +882,7 @@ footer{
     .below-search{
         display: grid;
         grid-template-columns: auto auto;
-        font-size: 11pt;
+        font-size: 10pt;
     }
 
     .categories{
@@ -852,21 +891,54 @@ footer{
 
     .get{
         align-self: self-end;
-        width: 200px;
         margin: 0;
+        flex-direction: row;
     }
 
     .change-btn{
-        font-size: 11pt;
-    }
-
-    .mybar{
-        width: 55%;
+        font-size: 10pt;
     }
 
     .receiveorderContainer{
         width: 75%;        
     }
+
+    .flavour-container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .flavour-categories{
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    .fc{
+        width: 35%;
+        height: 100px;
+        margin-right: 0;
+    }
+
+    .bar, .refresh, .dailycare, .pets, .fnv{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .orders, .about, .help, .socials{
+        margin-left: 15px;
+    }
+
+    .content{
+        margin: 0;
+    }
+
+    .checkout{
+        width: 100%;
+    }
+
 }
 
 /*SEARCH RESPONSIVENESS*/
@@ -875,7 +947,12 @@ footer{
     .CLEAN-HTML{
         display: grid;
         grid-template-columns: repeat(4, 0.144fr);
-    }    
+    }
+    
+    .categories{
+        margin-left: 5%;
+        width: 300px;
+    }
 }
 
 @media screen and (max-width: 1080px){
@@ -896,5 +973,24 @@ footer{
     .CLEAN-HTML{
         display: grid;
         grid-template-columns: repeat(1, 0.144fr);
-    }    
+    }   
+    
+    .categories{
+     width: 190px;
+    }
+    
+}
+
+@media screen and (max-width: 500px){
+    .open-cart{
+        width: 100%;
+    }
+
+    .checkout{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 414px) and (max-height: 896px){
+    
 }
