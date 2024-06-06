@@ -4,12 +4,12 @@ GigaMercado é um site de Super Mercado responsivo feito utilizando HTML, CSS e 
 
 ###Funcionalidades
 
-1-Adicionar produtos ao carrinho
+Adicionar produtos ao carrinho
 
-2-Pesquisar por produtos
+Pesquisar por produtos
 
-3-Filtrar por categoria
+Filtrar por categoria
 
-4-Sidebars do carrinho e das categorias
+Sidebars do carrinho e das categorias
 
-5-Carrinho com preço total correspondente à quantidade e preço de cada produto
+Carrinho com preço total correspondente à quantidade e preço de cada produto
