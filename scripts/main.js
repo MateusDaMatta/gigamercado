@@ -571,6 +571,37 @@ butao.forEach((btn) => {
 
 addToCart(buyButton)
 
+//POPUP ADDED TO CART
+let currentPopup = null
+
+buyButton.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+        let addedToCartMsg = `<div class="addedpopup">
+        <span>Item added to cart</span>
+        </div>`
+
+        content.insertAdjacentHTML('beforeend', addedToCartMsg)
+
+        let cartPopup = content.lastElementChild
+        
+        if (currentPopup) {
+            currentPopup.classList.remove('show')
+            currentPopup.classList.add('hide')
+          }
+      
+          setTimeout(() => {
+            cartPopup.classList.add('show')
+          }, 50)
+      
+          currentPopup = cartPopup
+      
+          setTimeout(() => {
+            cartPopup.classList.remove('show')
+            cartPopup.classList.add('hide')
+          }, 3700)
+    })
+})
+
 function updatePrice(cartItem) {
   const selectedItem = items.find(
     (item) => item.id === parseInt(cartItem.dataset.id)

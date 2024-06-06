@@ -805,6 +805,35 @@ footer{
     cursor: pointer;
 }
 
+/*POPUP*/
+.addedpopup{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13pt;
+    width: 185px;
+    height: 50px;
+    color: black;
+    background-color: rgb(170, 170, 170);
+    border-radius: 15px;
+    bottom: 0;
+    left: 1%;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.addedpopup.show{
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    bottom: 8%;
+}
+
+.addedpopup.hide{
+    opacity: 0;
+    bottom: -10%;
+}
+
 /*RESPONSIVENESS*/
 @media screen and (max-width: 1080px){
 
