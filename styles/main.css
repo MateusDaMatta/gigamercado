@@ -253,7 +253,7 @@ a{
 }
 
 .checkout{
-    position: fixed;
+    position: static;
     bottom: 0;
 }
 
